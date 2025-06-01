@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>My Portofolioku</title>
+  <link rel="icon" href="anu iki logo.jpg" type="i ma ge">
+<style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #1f1f1f;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #b46cff;
+    }
+
+    .hamburger {
+      width: 24px;
+      height: 2px;
+      background: white;
+      position: relative;
+      margin-left: 20px;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: white;
+      left: 0;
+    }
+
+    .hamburger::before {
+      top: -8px;
+    }
+
+    .hamburger::after {
+      top: 8px;
+    }
+
+    .container {
+      padding: 120px 60px 60px 60px;
+    }
+
+    .text-content {
+      max-width: 100%;
+    }
+
+    .text-content h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .text-content h1 span.white {
+      color: white;
+    }
+
+    .text-content h1 span.purple {
+      color: #b46cff;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .about-section {
+      padding: 60px;
+      background-color: #1f1f1f;
+    }
+
+    .about-section h2 {
+      font-size: 40px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .about-section hr {
+      border: 0;
+      height: 2px;
+      background: white;
+      margin-bottom: 30px;
+    }
+
+    .about-section p {
+    max-width: 800px;
+    margin: 0 0 30px 0;
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+    .education h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: white;
+    }
+
+    .education p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      color: #fff;
+      position: relative;
+    }
+
+    .footer-link {
+      color: #b46cff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-line {
+      flex-grow: 1;
+      height: 2px;
+      background-color: white;
+      margin: 0 20px;
+    }
+
+    .footer-right {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .container, .about-section {
+        padding: 100px 20px 40px 20px;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+
+      .footer-line {
+        display: none;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px 0 0;
+    font-size: 13px;
+  }
+
+  .container {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 100px 20px 40px 20px;
+  }
+
+  .text-content, .image-content {
+    max-width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 28px !important;
+  }
+
+  .text-content p {
+    font-size: 16px !important;
+  }
+
+  .image-content {
+    width: 100% !important;
+    height: auto !important;
+    clip-path: none !important;
+  }
+
+  .image-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-line {
+    display: none;
+  }
+
+  section {
+    padding: 60px 20px !important;
+  }
+
+  section h2 {
+    font-size: 28px !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Ferril Ravael Akbar</div>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="aboutme.html">Tentang Saya</a>
+<a href="pengalaman.html">Pengalaman</a>
+<a href="kontak.html">Kontak Saya</a>
+</nav>
+</header>
+<section class="about-section" id="about">
+<h2 class="fade-up" style="animation-delay: 0.0s;">Tentang Saya</h2>
+<hr/>
+<p class="fade-up" style="animation-delay: 0.2s;">Saya adalah seorang mahasiswa aktif di Universitas Merdeka Malang, saat ini sedang menempuh semester 4 pada program studi S1 Sistem Informasi. Sebelumnya, saya menyelesaikan pendidikan di SMK Negeri 6 Malang, jurusan Teknik Komputer dan Jaringan, yang menjadi dasar minat saya terhadap dunia teknologi dan informasi.</p>
+<div class="education">
+<h3 class="fade-up" style="animation-delay: 0.4s;">Riwayat Pendidikan</h3>
+<h3 class="fade-up" style="animation-delay: 0.6s;">SMK NEGERI 6 MALANG</h3>
+<p class="fade-up" style="animation-delay: 0.8s;">Memiliki keahlian dalam pembuatan kabel LAN dengan standar yang baik dan benar, serta mampu 
+        merakit PC secara efisien mulai dari pemilihan komponen hingga pengujian performa. Terampil dalam 
+        instalasi komputer dan aplikasi pada sistem operasi Windows, memastikan perangkat siap digunakan 
+        dengan optimal.
+  </p>
+<h3 class="fade-up" style="animation-delay: 1.0s;">UNIVERSITAS MERDEKA MALANG</h3>
+<p class="fade-up" style="animation-delay: 1.2s;">Saat ini saya sedang menempuh pendidikan jenjang Strata 1 di Program Studi Sistem Informasi, Fakultas Teknologi Informasi, Universitas Merdeka Malang. Selama masa studi, saya mempelajari berbagai bidang terkait teknologi informasi, pemograman, manajemen basis data, analisis sistem, serta penerapan sistem informasi dalam dunia bisnis dan organisasi.</p>
+</div>
+</section>
+<br/><br/><br/><br/><br/>
+<footer>
+<div class="footer-left">
+<a class="footer-link" href="https://media.tenor.com/q0Ejci9EQhcAAAAi/rick-astley-rick-roll.gif">FERRIL RAVAEL AKBAR</a>
+</div>
+<div class="footer-line"></div>
+<div class="footer-right">
+      2025
+    </div>
+</footer>
+</body>
+</html>
